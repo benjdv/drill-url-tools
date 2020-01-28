@@ -53,7 +53,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (scheme != null) {
         byte[] schemeBytes = scheme.getBytes();
-        buffer.reallocIfNeeded(schemeBytes.length); 
+        buffer = buffer.reallocIfNeeded(schemeBytes.length); 
         buffer.setBytes(0, schemeBytes);
         row.start = 0; 
         row.end = schemeBytes.length; 
@@ -63,7 +63,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (username != null) {
         byte[] userBytes = username.getBytes();
-        buffer.reallocIfNeeded(userBytes.length); 
+        buffer = buffer.reallocIfNeeded(userBytes.length); 
         buffer.setBytes(0, userBytes);
         row.start = 0; 
         row.end = userBytes.length; 
@@ -73,7 +73,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (password != null) {
         byte[] passBytes = password.getBytes();
-        buffer.reallocIfNeeded(passBytes.length); 
+        buffer = buffer.reallocIfNeeded(passBytes.length); 
         buffer.setBytes(0, passBytes);
         row.start = 0; 
         row.end = passBytes.length; 
@@ -83,7 +83,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (host != null) {
         byte[] hostBytes = host.getBytes();
-        buffer.reallocIfNeeded(hostBytes.length); 
+        buffer = buffer.reallocIfNeeded(hostBytes.length); 
         buffer.setBytes(0, hostBytes);
         row.start = 0; 
         row.end = hostBytes.length; 
@@ -93,7 +93,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (port != null) {
         byte[] portBytes = port.getBytes();
-        buffer.reallocIfNeeded(portBytes.length); 
+        buffer = buffer.reallocIfNeeded(portBytes.length); 
         buffer.setBytes(0, portBytes);
         row.start = 0; 
         row.end = portBytes.length; 
@@ -103,7 +103,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (path != null) {
         byte[] pathBytes = path.getBytes();
-        buffer.reallocIfNeeded(pathBytes.length); 
+        buffer = buffer.reallocIfNeeded(pathBytes.length); 
         buffer.setBytes(0, pathBytes);
         row.start = 0; 
         row.end = pathBytes.length; 
@@ -113,7 +113,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (query != null) {
         byte[] queryBytes = query.getBytes();
-        buffer.reallocIfNeeded(queryBytes.length); 
+        buffer = buffer.reallocIfNeeded(queryBytes.length); 
         buffer.setBytes(0, queryBytes);
         row.start = 0; 
         row.end = queryBytes.length; 
@@ -123,7 +123,7 @@ public class URLParse implements DrillSimpleFunc {
 
       if (fragment != null) {
         byte[] fragBytes = fragment.getBytes();
-        buffer.reallocIfNeeded(fragBytes.length); 
+        buffer = buffer.reallocIfNeeded(fragBytes.length); 
         buffer.setBytes(0, fragBytes);
         row.start = 0; 
         row.end = fragBytes.length; 
